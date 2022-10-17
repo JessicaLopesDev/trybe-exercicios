@@ -1,0 +1,48 @@
+div:hover {
+    border: 1px solid rgba(163, 16, 16, 0.541);
+}
+
+div:nth-child(1) {
+    background: red;
+}
+
+div:nth-child(1) h3 {
+    color: yellow;
+}
+
+div:nth-child(2) {
+    background: yellow;
+}
+
+div:nth-child(2) h3 {
+    color: green;
+}
+
+div:nth-child(2) {
+    height: 100px;
+}
+
+div:nth-child(4) {
+    background: gray;
+}
+
+div:nth-child(4) h3 {
+    color: white;
+}
+
+div:nth-child(5) {
+    background: green;
+}
+
+div:nth-child(5) h3 {
+    color: red;
+}
+
+div:nth-child(odd) h3 {
+    text-decoration: underline;
+}
+
+div:nth-child(even) h3 {
+    text-decoration: none;
+}
+
