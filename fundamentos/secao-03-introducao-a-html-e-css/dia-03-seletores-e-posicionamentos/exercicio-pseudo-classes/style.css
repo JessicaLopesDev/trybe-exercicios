@@ -1,5 +1,5 @@
 div:hover {
-    border: 1px solid rgba(163, 16, 16, 0.541);
+    border: 3px solid black;
 }
 
 div:nth-child(1) {
@@ -11,7 +11,7 @@ div:nth-child(1) h3 {
 }
 
 div:nth-child(2) {
-    background: yellow;
+    background: purple;
 }
 
 div:nth-child(2) h3 {
@@ -23,7 +23,7 @@ div:nth-child(2) {
 }
 
 div:nth-child(4) {
-    background: gray;
+    background: black;
 }
 
 div:nth-child(4) h3 {
@@ -31,7 +31,7 @@ div:nth-child(4) h3 {
 }
 
 div:nth-child(5) {
-    background: green;
+    background: beige;
 }
 
 div:nth-child(5) h3 {
