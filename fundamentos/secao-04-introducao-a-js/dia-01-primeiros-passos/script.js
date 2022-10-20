@@ -1,6 +1,4 @@
-const a = 100;
-const b = 40;
-const c = 5;
+
 
 // Exercicio 1 
 // console.log(a+b)
@@ -74,8 +72,29 @@ const c = 5;
 // }
 
 
-// Exercicio 3
-// Exercicio 3
+// Exercicio 8
+// if (a % 2 == 0 || b % 2 == 0 || c % 2 == 0) {
+//     console.log("true")
+// } else {
+//     console.log("false")
+// }
+
+
+
+const a = 100;
+const b = 47;
+const c = 7;
+
+
+// Exercicio 9
+// if (a % 2 !== 0 || b % 2 !== 0 || c % 2 !== 0) {
+//     console.log("true")
+// } else {
+//     console.log("false")
+// }
+
+
+
 // Exercicio 3
 // Exercicio 3
 // Exercicio 3
