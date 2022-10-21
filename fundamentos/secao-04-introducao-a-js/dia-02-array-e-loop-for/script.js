@@ -43,22 +43,43 @@ let initial = 0
 
 
 // Exercicio 6 (quantos valores impares)
-let odd = 0
+// let odd = 0
 
-for (let index = 0; index < numbers.length; index++) {
-  if (numbers[index] % 2 !== 0) {
-    odd += 1
-  }
+// for (let index = 0; index < numbers.length; index++) {
+//   if (numbers[index] % 2 !== 0) {
+//     odd += 1
+//   }
+// }
+
+// if (odd === 0) {
+//   console.log("nenhum valor ímpar encontrado")
+// } else {
+//   console.log(odd);
+// }
+
+// Exercicio 7 (mmenor numero do array)
+// let smallest = numbers[0]
+
+// for (let index = 1; index < numbers.length; index++) {
+//   if (numbers[index] < smallest) {
+//     smallest = numbers[index];
+//   }
+// }
+// console.log(smallest);
+
+
+// Exercicio 8
+let array = []
+
+for (let index = 1; index < 25; index++) {
+  array.push(index)
 }
+// console.log(array)
 
-if (odd === 0) {
-  console.log("nenhum valor ímpar encontrado")
-} else {
-  console.log(odd);
+
+// Exercicio 9
+
+for (let index = 0; index < array.length; index++) {
+  let division = array[index] / 2
+  console.log(division)
 }
-
-
-// Exercicio 1
-// Exercicio 1
-// Exercicio 1
-// Exercicio 1
