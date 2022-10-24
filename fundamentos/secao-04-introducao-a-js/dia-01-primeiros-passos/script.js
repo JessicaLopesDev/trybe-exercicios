@@ -71,19 +71,20 @@
 //     console.log("F")
 // }
 
-
-// Exercicio 8
-// if (a % 2 == 0 || b % 2 == 0 || c % 2 == 0) {
-//     console.log("true")
-// } else {
-//     console.log("false")
-// }
-
-
-
 const a = 100;
 const b = 47;
 const c = 7;
+
+// Exercicio 8
+if (a % 2 == 0 || b % 2 == 0 || c % 2 == 0) {
+    console.log("true")
+} else {
+    console.log("false")
+}
+
+
+
+
 
 
 // Exercicio 9
@@ -95,8 +96,12 @@ const c = 7;
 
 
 
-// Exercicio 3
-// Exercicio 3
-// Exercicio 3
-// Exercicio 3
+
+
+// Exercicio 10
+
+
+
+
+// Exercicio 11
 
