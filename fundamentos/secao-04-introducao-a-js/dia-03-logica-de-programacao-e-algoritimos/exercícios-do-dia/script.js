@@ -56,13 +56,22 @@ let bigger = array[0]
 // console.log(smallest)
 
 
-
-
-
-
 // Exercício 4
-// Exercício
-// Exercício
-// Exercício
-// Exercício
-// Exercício
+
+// let numbers = 1;
+let cousinNumbers = 0;
+for (let counter = 2; counter <= 50; counter++) {
+    let isPrime = true;
+
+    for (let index = 2; index < counter; index++) {
+        if(counter % index == 0) {
+            isPrime = false;
+        } 
+    }
+    if (isPrime) {
+        cousinNumbers = counter;
+    }
+}
+
+console.log(cousinNumbers);
+
