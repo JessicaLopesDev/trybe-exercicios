@@ -107,8 +107,13 @@ function mostRepeated(array) {
     return response
 }
 
-console.log('result: ', mostRepeated([4, 8, 8, 3, 3, 2, 9, 9, 2]))
+console.log('result: ', mostRepeated([4, 9, 8, 3, 3, 2, 9, 9, 2]))
 
 // Exercicio 6
+// Crie uma função que receba um número natural (número inteiro não negativo) N e retorne o somatório de todos os números de 1 até N.
+// Valor de teste: N = 5.
+// Valor esperado no retorno da função: 1+2+3+4+5 = 15.
+
+
 // Exercicio 7
 // Exercicio 8
