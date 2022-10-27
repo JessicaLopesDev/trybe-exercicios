@@ -134,22 +134,22 @@
 // verificaFimPalavra('joaofernando', 'fernan');
 // Retorno esperado: false
 
-const endWord = (word, ending) => {
-    let separatedWord = word.split('').reverse();
-    let separatedEnding = ending.split('').reverse();
-    let result = false;
+// const endWord = (word, ending) => {
+//     let separatedWord = word.split('').reverse();
+//     let separatedEnding = ending.split('').reverse();
+//     let result = false;
 
-    if (word.length <= ending.length) {
-        console.log('A primeira palavra precisa ser maior que a segunda palavra.');
-        return result;
-    }
+//     if (word.length <= ending.length) {
+//         console.log('A primeira palavra precisa ser maior que a segunda palavra.');
+//         return result;
+//     }
 
-    for (let i = 0; i <= separatedEnding.length; i++) {
-        if (separatedEnding[i] === separatedWord[i]) {
-            result = true;
-        }
-    }
-    return result;
-}
+//     for (let i = 0; i <= separatedEnding.length; i++) {
+//         if (separatedEnding[i] === separatedWord[i]) {
+//             result = true;
+//         }
+//     }
+//     return result;
+// }
 
-console.log(endWord('jessica', 'ess'));
+// console.log(endWord('jessica', 'ess'));
