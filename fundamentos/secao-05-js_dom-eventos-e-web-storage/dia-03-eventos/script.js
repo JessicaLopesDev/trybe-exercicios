@@ -1,5 +1,13 @@
 
+const createFridaysButton = (name) => {
+  const buttonsContainer = document.querySelector('.buttons-container');
+  const fridaysButton = document.createElement('button');
+  fridaysButton.innerHTML = name;
+  fridaysButton.id = 'btn-friday';
 
+  buttonsContainer.appendChild(fridaysButton);
+}
+createFridaysButton('Sexta-feira');
 
 const createHolidaysButton = (name) => {
   const buttonsContainer = document.querySelector('.buttons-container');
@@ -53,7 +61,6 @@ const createDaysOfTheWeek = () => {
   createDaysOfMonth();
 }
 
-window.onload = createDaysOfTheWeek;
 
 const holidayButton = document.querySelector('#btn-holiday');
 console.log(holidayButton)
@@ -72,7 +79,7 @@ const changeBackgroundHolidays = () => {
 }
 holidayButton.addEventListener('click', changeBackgroundHolidays)
 
-
+window.onload = createDaysOfTheWeek;
 
 // Escreva seu código abaixo.
 
