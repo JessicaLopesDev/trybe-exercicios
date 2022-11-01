@@ -1,12 +1,16 @@
 
+
+
 const createHolidaysButton = (name) => {
   const buttonsContainer = document.querySelector('.buttons-container');
-  const hollidaysButton = document.createElement('button');
-  hollidaysButton.innerHTML = name;
-  hollidaysButton.id = 'btn-holiday';
+  const holidaysButton = document.createElement('button');
+  holidaysButton.innerHTML = name;
+  holidaysButton.id = 'btn-holiday';
 
-  buttonsContainer.appendChild(hollidaysButton);
+  buttonsContainer.appendChild(holidaysButton);
 }
+createHolidaysButton('Feriados');
+
 
 const createDaysOfMonth = () => {
   const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
@@ -47,10 +51,28 @@ const createDaysOfTheWeek = () => {
   };
 
   createDaysOfMonth();
-  createHolidaysButton('Feriados');
 }
 
-createDaysOfTheWeek();
+window.onload = createDaysOfTheWeek;
+
+const holidayButton = document.querySelector('#btn-holiday');
+console.log(holidayButton)
+
+
+const changeBackgroundHolidays = () => {
+  const holidays = document.querySelectorAll('.holiday');
+  
+  for (let item of holidays) {
+    if (item.style.background === 'red') {
+      item.style.background = 'rgb(238,238,238)'
+    } else {
+      item.style.background = 'red';
+    }
+  }
+}
+holidayButton.addEventListener('click', changeBackgroundHolidays)
+
+
 
 // Escreva seu código abaixo.
 
