@@ -79,6 +79,21 @@ const changeBackgroundHolidays = () => {
 }
 holidayButton.addEventListener('click', changeBackgroundHolidays)
 
+const fridayButton = document.querySelector('#btn-friday')
+
+const changeTextFridays = () => {
+  const fridays = document.querySelectorAll('.friday');
+  
+  for (let item of fridays) {
+    if (item.style.fontWeight === '800') {
+      item.style.fontWeight = '400'
+    } else {
+      item.style.fontWeight = '800';
+    }
+  }
+}
+fridayButton.addEventListener('click', changeTextFridays)
+
 window.onload = createDaysOfTheWeek;
 
 // Escreva seu código abaixo.
