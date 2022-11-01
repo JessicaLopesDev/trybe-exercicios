@@ -1,5 +1,14 @@
 
-const creatingDaysOfMonth = () => {
+const createHolidaysButton = (name) => {
+  const buttonsContainer = document.querySelector('.buttons-container');
+  const hollidaysButton = document.createElement('button');
+  hollidaysButton.innerHTML = name;
+  hollidaysButton.id = 'btn-holiday';
+
+  buttonsContainer.appendChild(hollidaysButton);
+}
+
+const createDaysOfMonth = () => {
   const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
   const monthDays = document.querySelector('#days');
   
@@ -13,7 +22,8 @@ const creatingDaysOfMonth = () => {
     }
     else if (days === 24 || days === 31) {
       dayItem.className = 'holiday day'
-    } else if (days === 4 || days === 11 || days === 18) {
+    } 
+    else if (days === 4 || days === 11 || days === 18) {
       dayItem.className = 'friday day'
     }
     else {
@@ -36,12 +46,15 @@ const createDaysOfTheWeek = () => {
     weekDaysList.appendChild(dayListItem);
   };
 
-  creatingDaysOfMonth();
+  createDaysOfMonth();
+  createHolidaysButton('Feriados');
 }
 
 createDaysOfTheWeek();
 
 // Escreva seu código abaixo.
+
+
 
 
 
