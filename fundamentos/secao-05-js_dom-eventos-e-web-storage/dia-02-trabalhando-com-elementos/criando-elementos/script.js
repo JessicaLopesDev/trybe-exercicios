@@ -27,4 +27,4 @@ primeiroFilhoDoFilho.appendChild(createChild2);
 
 // A partir desse filho criado, acesse terceiroFilho.
 const terceiroFilho = createChild2.parentElement.parentElement.nextElementSibling
-console.log(terceiroFilho)
+console.log(terceiroFilho);
