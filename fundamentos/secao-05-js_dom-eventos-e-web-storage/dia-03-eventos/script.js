@@ -127,7 +127,21 @@ const addColor = (color) => {
 
 addColor('purple');
 
+const colorTask = document.querySelector('.task');
 
+const selectTask = (event) => {
+
+  if (event.target.className === 'task selected') {
+    event.target.className = 'task';
+  } else {
+    event.target.className = 'task selected'
+  }
+}
+
+colorTask.addEventListener('click', selectTask)
+
+
+// const colorSelected = colorTask.style.background
 // const input = document.querySelector('#task-input');
 // const buttonAddTask = document.querySelector('#btn-add');
 // buttonAddTask.addEventListener('click', addTask)
