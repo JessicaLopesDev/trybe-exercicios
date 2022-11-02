@@ -103,20 +103,29 @@ const monthDays = document.querySelectorAll('.day');
 
 for (let item of monthDays) {
   item.addEventListener('mouseover', moreZoom);
-  item.addEventListener('mouseout', lessZoom)
+  item.addEventListener('mouseout', lessZoom);
 }
 
-
+const taskContainer = document.querySelector('.my-tasks');
 
 const addTask = (task) => {
-  const taskContainer = document.querySelector('.my-tasks');
   let newTask = document.createElement('span');
   newTask.innerHTML = task;
   
   taskContainer.appendChild(newTask);
 }
 
-addTask('home')
+addTask('Projeto');
+
+const addColor = (color) => {
+  const colorTask = document.createElement('div');
+  colorTask.className = 'task';
+  colorTask.style.background = color;
+
+  taskContainer.appendChild(colorTask);
+}
+
+addColor('purple');
 
 
 // const input = document.querySelector('#task-input');
