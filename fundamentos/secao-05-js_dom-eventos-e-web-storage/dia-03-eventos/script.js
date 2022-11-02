@@ -61,10 +61,7 @@ const createDaysOfTheWeek = () => {
 
 }
 
-
 const holidayButton = document.querySelector('#btn-holiday');
-console.log(holidayButton)
-
 
 const changeBackgroundHolidays = () => {
   const holidays = document.querySelectorAll('.holiday');
@@ -103,7 +100,6 @@ const lessZoom = (event) => {
 }
 
 const monthDays = document.querySelectorAll('.day');
-console.log(monthDays)
 
 for (let item of monthDays) {
   item.addEventListener('mouseover', moreZoom);
@@ -111,6 +107,21 @@ for (let item of monthDays) {
 }
 
 
+
+const addTask = (task) => {
+  const taskContainer = document.querySelector('.my-tasks');
+  let newTask = document.createElement('span');
+  newTask.innerHTML = task;
+  
+  taskContainer.appendChild(newTask);
+}
+
+addTask('home')
+
+
+// const input = document.querySelector('#task-input');
+// const buttonAddTask = document.querySelector('#btn-add');
+// buttonAddTask.addEventListener('click', addTask)
 
 window.onload = createDaysOfTheWeek;
 
