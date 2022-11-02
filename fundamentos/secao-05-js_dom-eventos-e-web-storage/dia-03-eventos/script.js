@@ -159,13 +159,28 @@ const coloringDays = (event) => {
 daysContainer.addEventListener('click', coloringDays);
 
 
+const buttonAddTask = document.querySelector('#btn-add');
 
+const addCommitment = (event) => {
+  const input = document.querySelector('#task-input');
+  const commitmentList = document.querySelector('.task-list');
 
+  if (!input.value.length) {
+    alert('Erro! Você precisa digitar um compromisso');
+    return;
+  } 
+  const newCommitment = document.createElement('li');
+  newCommitment.innerText = input.value;
+  commitmentList.appendChild(newCommitment);
+  input.value = '';
+}
 
-// const colorSelected = colorTask.style.background
-// const input = document.querySelector('#task-input');
-// const buttonAddTask = document.querySelector('#btn-add');
-// buttonAddTask.addEventListener('click', addTask)
+// console.log(commitmentList)
+buttonAddTask.addEventListener('click', addCommitment);
+document.addEventListener('keypress', (event) => {
+  event.key === 'Enter' && addCommitment();
+});
+
 
 window.onload = createDaysOfTheWeek;
 
