@@ -45,6 +45,7 @@ const createDaysOfMonth = () => {
     monthDays.appendChild(dayItem);
   }
 }
+createDaysOfMonth();
 
 const createDaysOfTheWeek = () => {
   const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
@@ -58,7 +59,6 @@ const createDaysOfTheWeek = () => {
     weekDaysList.appendChild(dayListItem);
   };
 
-  createDaysOfMonth();
 }
 
 
@@ -77,7 +77,7 @@ const changeBackgroundHolidays = () => {
     }
   }
 }
-holidayButton.addEventListener('click', changeBackgroundHolidays)
+holidayButton.addEventListener('click', changeBackgroundHolidays);
 
 const fridayButton = document.querySelector('#btn-friday')
 
@@ -92,7 +92,25 @@ const changeTextFridays = () => {
     }
   }
 }
-fridayButton.addEventListener('click', changeTextFridays)
+fridayButton.addEventListener('click', changeTextFridays);
+
+const moreZoom = (event) => {
+  event.target.style.fontSize = '26px'
+}
+
+const lessZoom = (event) => {
+  event.target.style.fontSize = '20px'
+}
+
+const monthDays = document.querySelectorAll('.day');
+console.log(monthDays)
+
+for (let item of monthDays) {
+  item.addEventListener('mouseover', moreZoom);
+  item.addEventListener('mouseout', lessZoom)
+}
+
+
 
 window.onload = createDaysOfTheWeek;
 
