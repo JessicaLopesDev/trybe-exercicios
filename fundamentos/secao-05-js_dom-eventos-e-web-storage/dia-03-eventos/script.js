@@ -118,16 +118,16 @@ const addTask = (task) => {
 addTask('Projeto');
 
 const addColor = (color) => {
-  const colorTask = document.createElement('div');
-  colorTask.className = 'task';
-  colorTask.style.background = color;
+  const colorTaskDiv = document.createElement('div');
+  colorTaskDiv.className = 'task';
+  colorTaskDiv.style.background = color;
 
-  taskContainer.appendChild(colorTask);
+  taskContainer.appendChild(colorTaskDiv);
 }
 
 addColor('purple');
 
-const colorTask = document.querySelector('.task');
+const colorTaskDiv = document.querySelector('.task');
 
 const selectTask = (event) => {
 
@@ -138,7 +138,28 @@ const selectTask = (event) => {
   }
 }
 
-colorTask.addEventListener('click', selectTask)
+colorTaskDiv.addEventListener('click', selectTask)
+
+let daysContainer = document.getElementById('days');
+let selectedTask = document.getElementsByClassName('task selected');
+let taskColor = colorTaskDiv.style.background;
+
+const coloringDays = (event) => {
+  let selectedColor = event.target.style.color;
+
+  if (selectedTask.length > 0 && selectedColor !== taskColor) {
+    let color = selectedTask[0].style.background;
+    event.target.style.color = color;
+  } else if (selectedColor === taskColor) {
+    event.target.style.color = 'rgb(119,119,119'
+  }
+    
+}
+
+daysContainer.addEventListener('click', coloringDays);
+
+
+
 
 
 // const colorSelected = colorTask.style.background
