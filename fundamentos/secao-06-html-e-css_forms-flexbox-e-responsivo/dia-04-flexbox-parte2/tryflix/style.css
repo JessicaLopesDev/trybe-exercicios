@@ -21,6 +21,10 @@ body {
   order: -1;
 }
 
+.header-container nav {
+  flex-grow: 1;
+}
+
 .menu-container {
   display: flex;
   flex-basis: 500px;
