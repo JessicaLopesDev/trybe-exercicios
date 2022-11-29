@@ -63,20 +63,19 @@ const books = [
 
 // const expectedResult = 'Stephen King';
 const authorBornIn1947 = (array) => {
-  array.find((item) => {
-    if (item.author.birthYear === 1947) console.log(item.author.name);
-  })
+  return array.find(item => item.author.birthYear === 1947).author.name;
 }
-authorBornIn1947(books);
+console.log(authorBornIn1947(books));
 
 
 // const expectedResult = 'Duna';
 const smallerName = (array) => {
-  const allNameBooks = array.map((item) => item.name)
-  let nameBook = allNameBooks[0];
+  let nameBook;
 
-  allNameBooks.forEach(element => {
-    if (element.length < nameBook.length) nameBook = element;
+  array.forEach(item => {
+    if (!nameBook || item.name.length < nameBook.length) {
+      nameBook = item.name;
+    };
   });
   return nameBook;
 }
@@ -94,25 +93,34 @@ console.log(smallerName(books));
 //   releaseYear: 1991,
 // };
 const getNamedBook = (array) => {
-  array.find((item) => {
-    if (item.name.length === 26) console.log(item)
-  })
+  return array.find(item => item.name.length === 26);
 }
-getNamedBook(books);
+console.log(getNamedBook(books));
 
 
 const expectedResult = false;
-function everyoneWasBornOnSecXX(array) {
-  const allBirthYear = array.map((item) => item.author.birthYear);
-  
-  const isAllOfSecXX = allBirthYear.every((item) => item > 1901 && item < 2000);
-  return isAllOfSecXX;
+function everyoneWasBornOnSecXX(array) {  
+  return array.every(item => item.author.birthYear > 1901 && item.author.birthYear < 2000);
 }
 console.log(everyoneWasBornOnSecXX(books));
 
 
 // const expectedResult = true;
 const someBookWasReleaseOnThe80s = (array) => {
-  return array.some((item) => item.releaseYear > 1980 && item.releaseYear < 1989);
+  return array.some(item => item.releaseYear > 1980 && item.releaseYear < 1989);
 }
 console.log(someBookWasReleaseOnThe80s(books));
+
+
+// const expectedResult = false;
+function authorUnique(array) {
+  let firstBirthYear = 0;
+  array.forEach((item) => {
+    if (item.author.birthYear !== firstBirthYear) {
+      firstBirthYear = item.author.allBirthYear
+    }
+    console.log(firstBirthYear)
+  })
+  // return array.every((item) => item.author.birthYear === firstBirthYear)
+}
+authorUnique(books);
