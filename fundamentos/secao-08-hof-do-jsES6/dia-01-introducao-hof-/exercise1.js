@@ -102,7 +102,6 @@ getNamedBook(books);
 
 
 const expectedResult = false;
-// O século XX iniciou em 1 de janeiro de 1901 e terminou em 31 de dezembro de 2000.
 function everyoneWasBornOnSecXX(array) {
   const allBirthYear = array.map((item) => item.author.birthYear);
   
@@ -110,3 +109,10 @@ function everyoneWasBornOnSecXX(array) {
   return isAllOfSecXX;
 }
 console.log(everyoneWasBornOnSecXX(books));
+
+
+// const expectedResult = true;
+const someBookWasReleaseOnThe80s = (array) => {
+  return array.some((item) => item.releaseYear > 1980 && item.releaseYear < 1989);
+}
+console.log(someBookWasReleaseOnThe80s(books));
