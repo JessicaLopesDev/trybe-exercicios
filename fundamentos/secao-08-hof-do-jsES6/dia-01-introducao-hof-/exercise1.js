@@ -93,10 +93,20 @@ console.log(smallerName(books));
 //   name: 'As Crônicas de Gelo e Fogo',
 //   releaseYear: 1991,
 // };
-
 const getNamedBook = (array) => {
   array.find((item) => {
     if (item.name.length === 26) console.log(item)
   })
 }
 getNamedBook(books);
+
+
+const expectedResult = false;
+// O século XX iniciou em 1 de janeiro de 1901 e terminou em 31 de dezembro de 2000.
+function everyoneWasBornOnSecXX(array) {
+  const allBirthYear = array.map((item) => item.author.birthYear);
+  
+  const isAllOfSecXX = allBirthYear.every((item) => item > 1901 && item < 2000);
+  return isAllOfSecXX;
+}
+console.log(everyoneWasBornOnSecXX(books));
