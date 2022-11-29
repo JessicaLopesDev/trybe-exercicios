@@ -100,7 +100,7 @@ console.log(getNamedBook(books));
 
 const expectedResult = false;
 function everyoneWasBornOnSecXX(array) {  
-  return array.every(item => item.author.birthYear > 1901 && item.author.birthYear < 2000);
+  return array.every(item => item.author.birthYear >= 1901 && item.author.birthYear <= 2000);
 }
 console.log(everyoneWasBornOnSecXX(books));
 
