@@ -61,4 +61,42 @@ const books = [
   },
 ];
 
-  // Adicione o código do exercício aqui:
+// const expectedResult = 'Stephen King';
+const authorBornIn1947 = (array) => {
+  array.find((item) => {
+    if (item.author.birthYear === 1947) console.log(item.author.name);
+  })
+}
+authorBornIn1947(books);
+
+
+// const expectedResult = 'Duna';
+const smallerName = (array) => {
+  const allNameBooks = array.map((item) => item.name)
+  let nameBook = allNameBooks[0];
+
+  allNameBooks.forEach(element => {
+    if (element.length < nameBook.length) nameBook = element;
+  });
+  return nameBook;
+}
+console.log(smallerName(books));
+
+
+// const expectedResult = {
+//   author: {
+//     birthYear: 1948,
+//     name: 'George R. R. Martin',
+//   },
+//   genre: 'Fantasia',
+//   id: 1,
+//   name: 'As Crônicas de Gelo e Fogo',
+//   releaseYear: 1991,
+// };
+
+const getNamedBook = (array) => {
+  array.find((item) => {
+    if (item.name.length === 26) console.log(item)
+  })
+}
+getNamedBook(books);
