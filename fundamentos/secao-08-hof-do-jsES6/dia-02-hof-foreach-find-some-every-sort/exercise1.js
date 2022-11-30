@@ -73,13 +73,7 @@ const books = [
 // ];
 
 const formatedBookNames = (array) => {
-  const result = array.map((element) => {
-    let name = element.name.toUpperCase();
-    let genre = element.genre.toUpperCase();
-    let author = element.author.name.toUpperCase();
-    return `${name} - ${genre} - ${author}`
-  });
-  return result;
+  return array.map((element) => `${element.name} - ${element.genre} - ${element.author.name}`);
 };
 
 console.log(formatedBookNames(books));
