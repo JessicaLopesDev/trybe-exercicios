@@ -35,7 +35,7 @@ const books = [
     genre: 'Ficção Científica',
     author: {
       name: 'Frank Herbert',
-      birthYear: 1920,
+      birthYear: 1921,
     },
     releaseYear: 1965,
   },
@@ -65,7 +65,7 @@ const books = [
 const authorBornIn1947 = (array) => {
   return array.find(item => item.author.birthYear === 1947).author.name;
 }
-console.log(authorBornIn1947(books));
+// console.log(authorBornIn1947(books));
 
 
 // const expectedResult = 'Duna';
@@ -79,7 +79,7 @@ const smallerName = (array) => {
   });
   return nameBook;
 }
-console.log(smallerName(books));
+// console.log(smallerName(books));
 
 
 // const expectedResult = {
@@ -95,32 +95,36 @@ console.log(smallerName(books));
 const getNamedBook = (array) => {
   return array.find(item => item.name.length === 26);
 }
-console.log(getNamedBook(books));
+// console.log(getNamedBook(books));
 
 
 const expectedResult = false;
 function everyoneWasBornOnSecXX(array) {  
   return array.every(item => item.author.birthYear >= 1901 && item.author.birthYear <= 2000);
 }
-console.log(everyoneWasBornOnSecXX(books));
+// console.log(everyoneWasBornOnSecXX(books));
 
 
 // const expectedResult = true;
 const someBookWasReleaseOnThe80s = (array) => {
   return array.some(item => item.releaseYear > 1980 && item.releaseYear < 1989);
 }
-console.log(someBookWasReleaseOnThe80s(books));
+// console.log(someBookWasReleaseOnThe80s(books));
 
 
 // const expectedResult = false;
 function authorUnique(array) {
-  let firstBirthYear = 0;
+  let firstBirthYear = 1;
+  
   array.forEach((item) => {
-    if (item.author.birthYear !== firstBirthYear) {
-      firstBirthYear = item.author.allBirthYear
+    if (!!firstBirthYear && item.author.birthYear !== firstBirthYear) {
+      firstBirthYear = item.author.birthYear
+    } else {
+      firstBirthYear = 0;
     }
-    console.log(firstBirthYear)
   })
-  // return array.every((item) => item.author.birthYear === firstBirthYear)
+
+  return !!firstBirthYear;
 }
-authorUnique(books);
+
+console.log(authorUnique(books));
