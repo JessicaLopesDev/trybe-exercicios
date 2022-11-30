@@ -35,7 +35,7 @@ const books = [
     genre: 'Ficção Científica',
     author: {
       name: 'Frank Herbert',
-      birthYear: 1921,
+      birthYear: 1920,
     },
     releaseYear: 1965,
   },
@@ -92,6 +92,15 @@ const books = [
 //   },
 // ];
 
-const nameAndAge = () => {
-  // escreva seu código aqui
+const nameAndAge = (array) => {
+  const newArray = array.map((element) => {
+    const objElement = {
+      author: element.author.name,
+      age: element.releaseYear - element.author.birthYear
+    };
+    return objElement;
+  })
+  return newArray.sort((a, b) => a.age - b.age);
 }
+
+console.log(nameAndAge(books));
