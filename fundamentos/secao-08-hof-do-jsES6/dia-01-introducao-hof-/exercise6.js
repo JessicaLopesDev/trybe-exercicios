@@ -61,6 +61,7 @@ const books = [
   },
 ];
 
+//Faça uma função que retorne true, caso nenhuma pessoa autora tenha nascido no mesmo ano, e false, caso contrário.
 // const expectedResult = false;
 function authorUnique(array) {
   let firstBirthYear = 1;

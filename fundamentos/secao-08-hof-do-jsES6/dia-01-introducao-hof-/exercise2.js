@@ -61,6 +61,8 @@ const books = [
   },
 ];
 
+//Retorne o nome do livro com menor número de caracteres (menor nome).
+
 // const expectedResult = 'Duna';
 const smallerName = (array) => {
   let nameBook;

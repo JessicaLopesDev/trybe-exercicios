@@ -61,6 +61,8 @@ const books = [
   },
 ];
 
+//Encontre o primeiro livro cujo nome possua 26 caracteres.
+
 // const expectedResult = {
 //   author: {
 //     birthYear: 1948,
@@ -71,6 +73,7 @@ const books = [
 //   name: 'As Crônicas de Gelo e Fogo',
 //   releaseYear: 1991,
 // };
+
 const getNamedBook = (array) => {
   return array.find(item => item.name.length === 26);
 }

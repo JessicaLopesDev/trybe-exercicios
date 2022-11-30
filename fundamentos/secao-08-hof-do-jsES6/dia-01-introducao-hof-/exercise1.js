@@ -60,6 +60,7 @@ const books = [
     releaseYear: 1928,
   },
 ];
+//Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.
 
 // const expectedResult = 'Stephen King';
 const authorBornIn1947 = (array) => {
