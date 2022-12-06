@@ -61,7 +61,8 @@ const books = [
   },
 ];
 
-// Adicione o código do exercício aqui:
+//Filtre todos os objetos do gênero ficção científica ou fantasia.
+
 const expectedResult = [
   {
     id: 1,
