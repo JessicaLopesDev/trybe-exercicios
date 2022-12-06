@@ -61,4 +61,16 @@ const books = [
   },
 ];
 
-// Adicione o código do exercício aqui:
+// Encontre o primeiro resultado cujo nome registrado começa com três iniciais e retorne o nome do livro.
+
+const expectedResult = 'O Senhor dos Anéis';
+
+const authorWith3DotsOnName = (array) => {
+  const mapped = array.map(item => item.author.name);
+  // return mapped
+  // const splitted = mapped.
+  const result = mapped.find(element => element[1] === '.' && element[7] === '.')
+  return result
+}
+
+console.log(authorWith3DotsOnName(books));
