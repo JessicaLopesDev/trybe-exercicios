@@ -88,11 +88,10 @@ const expectedResult = [
 ];
 
 const oldBooksOrdered = (array) => {
-  const dataAtual = new Date();
-  const anoAtual = dataAtual.getFullYear();
-  const filteredAraay = array.filter((element) => anoAtual - element.releaseYear > 60);
-
-  return filteredAraay.sort((a, b) => a.releaseYear - b.releaseYear);
+  const anoAtual = new Date().getFullYear();
+  
+  return array.filter((element) => anoAtual - element.releaseYear >= 60)
+    .sort((a, b) => a.releaseYear - b.releaseYear);
 }
 
 console.log(oldBooksOrdered(books));

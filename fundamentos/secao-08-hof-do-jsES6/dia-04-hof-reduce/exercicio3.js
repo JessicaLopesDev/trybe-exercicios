@@ -66,7 +66,7 @@ const books = [
 const expectedResult = [ 'Fundação', 'Duna' ];
 
 const booksByAuthorBirthYear = (birthYear) => {
-  const filteredArray = books.filter(element => element.author.birthYear === birthYear);
-  return filteredArray.map(element => element.name);
+  return books.filter(element => element.author.birthYear === birthYear)
+  .map(book => book.name);
 }
 console.log(booksByAuthorBirthYear(1920));

@@ -70,11 +70,11 @@ const expectedResult = [
 ];
 
 const oldBooks = (array) => {
-  const dataAtual = new Date();
-  const anoAtual = dataAtual.getFullYear();
-  const filteredAraay = array.filter((element) => anoAtual - element.releaseYear > 60);
+  const anoAtual = new Date().getFullYear();
 
-  return filteredAraay.map(item => item.name)
+  return array
+    .filter((element) => anoAtual - element.releaseYear > 60)
+    .map(item => item.name);
 }
 
 console.log(oldBooks(books));
