@@ -61,4 +61,12 @@ const books = [
   },
 ];
 
-// Adicione o código do exercício aqui:
+// Faça uma função que retorne os nomes dos livros, dado o ano de nascimento das pessoas autoras.
+
+const expectedResult = [ 'Fundação', 'Duna' ];
+
+const booksByAuthorBirthYear = (birthYear) => {
+  const filteredArray = books.filter(element => element.author.birthYear === birthYear);
+  return filteredArray.map(element => element.name);
+}
+console.log(booksByAuthorBirthYear(1920));
