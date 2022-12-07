@@ -8,10 +8,12 @@ const names = [
 
 const expectedResult = 20;
 
+const splittedNames = names.toString().toLowerCase().split('');
+//array names transformado em array de letras
+
 const countA = (array) => {
-  const splittedNames = array.toString().split('');
-  const lowerLetters = splittedNames.map(item => item.toLowerCase());
-  return lowerLetters.reduce((acc, curr) => curr === 'a' ? acc + 1 : acc, 0);
+  return array
+    .reduce((acc, curr) => curr === 'a' ? acc += 1 : acc, 0);
 }
 
-console.log(countA(names));
+console.log(countA(splittedNames));
