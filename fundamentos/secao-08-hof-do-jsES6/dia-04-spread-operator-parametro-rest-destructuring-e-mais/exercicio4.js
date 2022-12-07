@@ -31,7 +31,7 @@ const people = [
 ];
 
 const filteredPeople = (peopleData) => {
-    return peopleData.filter(({ bornIn, nationality}) => bornIn >= 1901 && bornIn <= 2000 && nationality === 'Australian') 
+    return peopleData.filter(({ bornIn, nationality}) => bornIn >= 1901 & bornIn <= 2000 && nationality === 'Australian') 
 }
 
 console.log(filteredPeople(people))
