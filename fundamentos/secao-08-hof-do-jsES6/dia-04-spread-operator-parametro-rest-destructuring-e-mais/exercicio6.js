@@ -11,6 +11,7 @@ const yearSeasons = {
 };
 
 // Resolução com função
+
 const monthsOfYear = ({ spring, summer, autumn, winter }) => {
     return [...spring, ...summer, ...autumn, ...winter]
 }
